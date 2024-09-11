@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="width=device-width, initial-scale=0.9" name="viewport">
   <title>Me: KaKa</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
@@ -23,6 +23,9 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
@@ -42,7 +45,7 @@
 
     <i class="header-toggle d-xl-none bi bi-list"></i>
 
-    <nav id="navmenu" class="navmenu">
+    <nav id="navmenu" class="navmenu" style="position: fixed;">
       <ul>
         <li><a href="#kakashome" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
         <li><a href="#about"><i class="bi bi-person navicon"></i><span>About Me</span></a></li>
@@ -84,25 +87,59 @@
     <section id="about" class="about section">
 
       <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
+      <div class="container section-title" data-aos="fade-up" style="width: 100%;">
         <h2>About Me</h2>
-        <p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hey there! This is Katherine. I'm a fresh graduate from the University of Toronto with a degree in Computer Science, 
+        <p class="py-3">Hey there! This is Katherine. I'm a fresh graduate from the University of Toronto with a degree in Computer Science, 
           and I’m all about problem-solving—especially when it comes to using tech to tackle complex challenges. My big dream is to 
           become a professional software engineer or developer, where I can keep that passion alive.
         <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When I’m not coding, you’ll find me traveling the world, soaking in local cultures, and chasing breathtaking views—because 
+        When I’m not coding, you’ll find me traveling the world, soaking in local cultures, and chasing breathtaking views—because 
         there’s nothing like seeing the world up close! I’m also into photography, capturing those perfect moments that make memories last.
         <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Just want to shout out again that I just end my university chapter of my life and I’m super excited and ready to dive into this next chapter and see what adventures lie ahead!
+        Just want to shout out again that I just end my university chapter of my life and I’m super excited and ready to dive into this next chapter and see what adventures lie ahead!
       </p>
       </div><!-- End Section Title -->
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="container" data-aos="fade-up" data-aos-delay="100", style="max-width: fit-content;">
 
         <div class="row gy-4 justify-content-center">
-          <div class="col-lg-4">
-            <img src="assets/img/profile.jpg" class="img-fluid" alt="">
+          <div class="container", style="width: 80%;">
+            <h2>Carousel Example</h2>
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+              </ol>
+          
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner">
+          
+                <div class="item active">
+                  <img src="assets/img/kaka_profile.jpg" alt="Los Angeles" style="width:100%;">
+                  <div class="carousel-caption">
+                    <h3>Los Angeles</h3>
+                    <p>LA is always so much fun!</p>
+                  </div>
+                </div>
+            
+              </div>
+          
+              <!-- Left and right controls -->
+              <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
           </div>
+          <!-- <div class="col-lg-4">
+            <img src="assets/img/profile.jpg" class="img-fluid" alt="">
+          </div> -->
           <!-- <div class="scroll-container">
             <div class="col-lg-4">
               <img src="assets/img/profile.jpg" class="img-fluid" alt="">
@@ -147,7 +184,7 @@
     </section><!-- /About Section -->
 
     <!-- Skills Section -->
-    <section id="skills" class="about section">
+    <section id="skills" class="about section" style="width: 100%;">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
@@ -181,7 +218,7 @@
     </section><!-- /Skills Section -->
 
     <!-- Resume Section -->
-    <section id="resume" class="resume section">
+    <section id="resume" class="resume section" style="width: 100%;">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
@@ -225,15 +262,21 @@
               <h4>Application Developer</h4>
               <h5>May 2024 - Present</h5>
               <a href="https://chai.cs.toronto.edu/"><p><em>CHAI Lab</em></p></a>
-              <p>Languages &amp; Framework used: JavaScript, TypeScript, HTML, CSS, Python, React, PostgreSQL</p>
+              <p>Languages &amp; Framework used: JavaScript, TypeScript, HTML, CSS, Python, 
+                <br>React, PostgreSQL</p>
               <ul>
-                <li>Contributed to the development of Android & iOS Application by enhancing user experience and performance,
-                  implemented hooks that enables researchers to track the screen time usage by participants</li>
-                <li>Integrated React with the existing database to cache frequently accessed data, eliminating manual data entry and
-                  reducing response times by directly querying the PostgreSQL database </li>
-                <li>Collaborated with the research team and participated in monthly Scrum meetings to analyze and fulfill research
+                <li>Contributed to the development of Android & iOS Application by enhancing 
+                  <br>user experience and performance, implemented hooks that enables 
+                  <br>researchers to track the screen time usage by participants</li>
+                <li>Integrated React with the existing database to cache frequently accessed data, 
+                  <br>eliminating manual data entry and
+                  reducing response times by directly 
+                  <br>querying the PostgreSQL database </li>
+                <li>Collaborated with the research team and participated in monthly Scrum meetings to analyze and fulfill 
+                  <br>research
                   requirements, driving impact research outcomes</li>
-                <li>Managed participants performance metrics and analyzed feedback data using Pandas in Python, providing actionable
+                <li>Managed participants performance metrics and analyzed feedback data using 
+                  <br>Pandas in Python, providing actionable
                   insights to improve product offerings</li>
               </ul>
             </div><!-- End Resume Item -->
@@ -242,7 +285,8 @@
               <h4>Backend Developer</h4>
               <h5>May 2022 - Aug 2023</h5>
               <p><em>IBM</em></p>
-              <p>Languages &amp; Framework used: Python, Java, C, TypeScript, JavaScript, HTML, CSS</p>
+              <p>Languages &amp; Framework used: Python, Java, C, TypeScript, JavaScript, 
+                <br>HTML, CSS</p>
               <ul>
                 <li>Developed an IDE and CI/CD applications on OpenShift for IBM i customers, enabling a modern editing experience for
                   IBM i languages and streamlining DevOps processes for application development</li>
@@ -250,14 +294,19 @@
                   members to work simultaneously, thereby enhancing overall productivity</li>
                 <li>Created comprehensive end-to-end system tests using Python, Jest, and Selenium WebDriver, significantly enhancing
                   release stability</li>
-                <li>Actively participated in weekly Scrum meetings, providing updates on progress and collaborating with team members to
-                  ensure alignment with Agile development methodologies</li>
+                <li>Actively participated in weekly Scrum meetings, providing updates on 
+                  <br>progress and collaborating with team members to
+                  ensure alignment with 
+                  <br>Agile development methodologies</li>
               </ul>
             </div><!-- End Resume Item -->
 
           </div>
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100"></div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
             <h3 class="resume-title">Project</h3>
 
             <div class="resume-item">
@@ -279,12 +328,12 @@
                 <li>Enhanced the user experience for 1,000+ active players by ensuring persistent and reliable access to game data</li>
               </ul>
             </div><!-- End Resume Item -->
-
+            <h3 class="resume-title"> </h3>
             <div class="resume-item">
               <h4>Context-Aware Interaction Techniques for VR Applications</h4>
               <p>Languages &amp; Frameworks used: JavaScript, Unity, WebGL, React.js, C#</p>
               <ul>
-                <li>Developed a VR system using Unity, WebGL, and JavaScript to design interactive environments, enabling users wearing VR glasses to navigate obstacles and reach targets</li>
+                <li style="width: auto;">Developed a VR system using Unity, WebGL, and JavaScript to design interactive environments, enabling users wearing VR glasses to navigate obstacles and reach targets</li>
                 <li>Implemented adaptive interactions to minimize distractions, enhancing the user experience with intuitive, reversible actions</li>
                 <li>Integrated dynamic mode transitions between Direct Interactor and Ray Interactor, improving engagement and usability</li>
                 </ul>
@@ -294,7 +343,7 @@
               <h4>Multi-Master</h4>
               <p>Language used: C++</p>
               <ul>
-                <li>Introduced multiple master nodes to distribute the load and improve efficiency, surpassing the traditional single-master approach</li>
+                <li style="width: 90%;">Introduced multiple master nodes to distribute the load and improve efficiency, surpassing the traditional single-master approach</li>
                 <li>Developed solutions for concurrency issues and lock management, ensuring data consistency and minimizing conflicts across multiple masters</li>
                 <li>Enhanced SQL query parsing speed and reliability by optimizing system architecture for parallel processing and reducing bottlenecks</li>
                 </ul>
@@ -312,7 +361,6 @@
 
 
           </div>
-
         </div>
 
       </div>
